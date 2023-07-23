@@ -13,6 +13,7 @@ from dash import Dash, dcc, html, Input, Output
 
 
 app = Dash(__name__)
+server=app.server
 
 #df=pd.read_json('all_berita_predict.json')
 
@@ -60,5 +61,5 @@ def update_plot_src(input_value):
 
 # ------------------------------------------------------------------------------
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(debug=False)
 
